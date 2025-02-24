@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router'
 import Home from '../pages/Home'
 import ThankYou from '../pages/ThankYou'
-import Navbar from '../components/navbar'
+import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
 const Index = () => {
