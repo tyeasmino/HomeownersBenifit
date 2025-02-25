@@ -126,38 +126,38 @@ const FormCard = () => {
 
                 {step === 2 && (
                     <div>
-                        <div className='flex gap-14'>
+                        <div className='flex gap-7 md:gap-14'>
                             <div className='text-[10px] flex flex-col items-center text-blue-600'>
                                 <span className='w-5 h-5 flex items-center justify-center rounded-full border border-blue-600'>1</span>
-                                <p className=' '>Next</p>
+                                <p className='font-bold'>Next</p>
                             </div>
 
                             <div className='text-[10px] flex flex-col relative items-center'>
                                 <span className='w-5 h-5 flex items-center justify-center rounded-full border border-green-500'>2</span>
-                                <p className=' '>Next</p>
-                                <span className='absolute top-3 left-7 w-[80px] bg-black h-[1px]'></span>
+                                <p className='font-bold'>Next</p>
+                                <span className='absolute top-3 left-5 w-[30px] md:w-[80px] bg-black h-[1px]'></span>
                             </div>
 
-                            <div className='flex gap-12 ml-12'>
+                            <div className='flex gap-3 md:gap-12 md:ml-12'>
                                 <div className='text-[10px] flex flex-col relative items-center mx-2'>
                                     <span className='w-5 h-5 flex items-center justify-center  rounded-full border border-gray-500'>3</span>
                                     <p className=''>Next</p>
-                                    <span className='absolute top-3 left-10 w-[30px] bg-gray-500 h-[1px]'></span>
+                                    <span className='absolute top-3 left-7 md:left-10 w-[10px] md:w-[30px] bg-gray-500 h-[1px]'></span>
                                 </div>
                                 <div className='text-[10px] flex flex-col relative items-center mx-2'>
                                     <span className='w-5 h-5 flex items-center justify-center  rounded-full border border-gray-500'>4</span>
                                     <p className=''>Next</p>
-                                    <span className='absolute top-3 left-10 w-[30px] bg-gray-500 h-[1px]'></span>
+                                    <span className='absolute top-3 left-7 md:left-10 w-[10px] md:w-[30px] bg-gray-500 h-[1px]'></span>
                                 </div>
                                 <div className='text-[10px] flex flex-col relative items-center mx-2'>
                                     <span className='w-5 h-5 flex items-center justify-center  rounded-full border border-gray-500'>5</span>
-                                    <p className=''>Last Page</p>
+                                    <p className='absolute w-20 top-5 -left-2 md:block'>Last Page</p>
                                 </div>
                             </div>
                         </div>
-                        <h5 className='font-bold text-[20px] mt-5 mb-3'>Is your monthly electricity bills over $99? *</h5>
+                        <h5 className='font-bold text-[13px] md:text-[20px] mt-5 mb-3'>Is your monthly electricity bills over $99? *</h5>
                         <div className='flex flex-col gap-1'>
-                            <label className='text-gray-500' >
+                            <label className='md:text-gray-500' >
                                 <input required
                                     type="radio"
                                     name="monthlyBill"
@@ -167,7 +167,7 @@ const FormCard = () => {
                                 />{" "}
                                 Yes
                             </label>
-                            <label className='text-gray-500' >
+                            <label className='md:text-gray-500' >
                                 <input required
                                     type="radio"
                                     name="monthlyBill"
@@ -184,37 +184,37 @@ const FormCard = () => {
 
                 {step === 3 && (
                     <div>
-                        <div className='flex gap-14'>
+                        <div className='flex gap-7 md:gap-14'>
                             <div className='text-[10px] flex flex-col items-center text-blue-600'>
                                 <span className='w-5 h-5 flex items-center justify-center rounded-full border border-blue-600'>1</span>
-                                <p className=' '>Next</p>
+                                <p className='font-bold'>Next</p>
                             </div>
 
                             <div className='text-[10px] flex flex-col items-center text-blue-600'>
                                 <span className='w-5 h-5 flex items-center justify-center rounded-full border border-blue-600'>2</span>
-                                <p className=' '>Next</p>
+                                <p className='font-bold'>Next</p>
                             </div>
 
                             <div className='text-[10px] flex flex-col relative items-center'>
                                 <span className='w-5 h-5 flex items-center justify-center rounded-full border border-green-500'>3</span>
-                                <p className=' '>Next</p>
-                                <span className='absolute top-3 left-7 w-[80px] bg-black h-[1px]'></span>
+                                <p className='font-bold'>Next</p>
+                                <span className='absolute top-3 left-5 w-[30px] md:w-[80px] bg-black h-[1px]'></span>
                             </div>
 
-                            <div className='flex gap-12 ml-12'>
+                            <div className='flex gap-3 md:gap-12 md:ml-12'>
 
                                 <div className='text-[10px] flex flex-col relative items-center mx-2'>
                                     <span className='w-5 h-5 flex items-center justify-center  rounded-full border border-gray-500'>4</span>
                                     <p className=''>Next</p>
-                                    <span className='absolute top-3 left-10 w-[30px] bg-gray-500 h-[1px]'></span>
+                                    <span className='absolute top-3 left-7 md:left-10 w-[10px] md:w-[30px] bg-gray-500 h-[1px]'></span>
                                 </div>
                                 <div className='text-[10px] flex flex-col relative items-center mx-2'>
                                     <span className='w-5 h-5 flex items-center justify-center  rounded-full border border-gray-500'>5</span>
-                                    <p className=''>Last Page</p>
+                                    <p className='absolute w-20 top-5 -left-2 md:block'>Last Page</p>
                                 </div>
                             </div>
                         </div>
-                        <h5 className='font-bold text-[20px] mt-5 mb-3'>Your estimated credit score? *</h5>
+                        <h5 className='font-bold text-[13px] md:text-[20px] mt-5 mb-3'>Your estimated credit score? *</h5>
                         <div className='flex flex-col gap-1'>
                             <label className='text-gray-500'>
                                 <input required
@@ -263,41 +263,39 @@ const FormCard = () => {
 
                 {step === 4 && (
                     <div>
-                        <div className='flex gap-14'>
+                        <div className='flex gap-7 md:gap-14'>
                             <div className='text-[10px] flex flex-col items-center text-blue-600'>
                                 <span className='w-5 h-5 flex items-center justify-center rounded-full border border-blue-600'>1</span>
-                                <p className=' '>Next</p>
+                                <p className='font-bold'>Next</p>
                             </div>
 
                             <div className='text-[10px] flex flex-col items-center text-blue-600'>
                                 <span className='w-5 h-5 flex items-center justify-center rounded-full border border-blue-600'>2</span>
-                                <p className=' '>Next</p>
+                                <p className='font-bold'>Next</p>
                             </div>
 
                             <div className='text-[10px] flex flex-col items-center text-blue-600'>
                                 <span className='w-5 h-5 flex items-center justify-center rounded-full border border-blue-600'>3</span>
-                                <p className=' '>Next</p>
+                                <p className='font-bold'>Next</p>
                             </div>
 
                             <div className='text-[10px] flex flex-col relative items-center'>
                                 <span className='w-5 h-5 flex items-center justify-center rounded-full border border-green-500'>4</span>
-                                <p className=' '>Next</p>
-                                <span className='absolute top-3 left-7 w-[80px] bg-black h-[1px]'></span>
+                                <p className='font-bold'>Next</p>
+                                <span className='absolute top-3 left-5 w-[30px] md:w-[80px] bg-black h-[1px]'></span>
                             </div>
 
-                            <div className='flex gap-12 ml-12'>
-
-
+                            <div className='flex gap-12 md:ml-12'>
                                 <div className='text-[10px] flex flex-col relative items-center mx-2'>
                                     <span className='w-5 h-5 flex items-center justify-center  rounded-full border border-gray-500'>5</span>
-                                    <p className=''>Last Page</p>
+                                    <p className='absolute w-20 top-5 -left-2 md:block'>Last Page</p>
                                 </div>
                             </div>
                         </div>
 
-                        <h5 className='font-bold text-[20px] mt-5 mb-3'>Your Name *</h5>
+                        <h5 className='font-bold text-[13px] md:text-[20px] mt-5 mb-3'>Your Name *</h5>
                         <input required
-                            className='border w-full border-gray-700 rounded-full px-5 py-2'
+                            className='border text-[12px] md:text-[14px] w-full border-gray-700 rounded-full px-5 py-2'
                             type="text"
                             name="name"
                             placeholder='Type Your Name'
@@ -306,10 +304,10 @@ const FormCard = () => {
                         />{" "}
 
 
-                        <h5 className='font-bold text-[20px] mt-5 mb-3'>Address *</h5>
+                        <h5 className='font-bold text-[13px] md:text-[20px] mt-5 mb-3'>Address *</h5>
                         <div className='flex flex-col gap-2'>
                             <input required
-                                className='border  border-gray-700 rounded-full px-5 py-2'
+                                className='border text-[12px] md:text-[14px] border-gray-700 rounded-full px-5 py-2'
                                 type="text"
                                 name="address"
                                 placeholder='Street Address'
@@ -318,7 +316,7 @@ const FormCard = () => {
                             />{" "}
 
                             <input required
-                                className='border  border-gray-700 rounded-full px-5 py-2'
+                                className='border text-[12px] md:text-[14px] border-gray-700 rounded-full px-5 py-2'
                                 type="text"
                                 name="city"
                                 placeholder='City'
@@ -327,7 +325,7 @@ const FormCard = () => {
                             />{" "}
 
                             <input required
-                                className='border  border-gray-700 rounded-full px-5 py-2'
+                                className='border text-[12px] md:text-[14px] border-gray-700 rounded-full px-5 py-2'
                                 type="text"
                                 name="zip"
                                 placeholder='Zip'
@@ -336,7 +334,7 @@ const FormCard = () => {
                             />{" "}
 
                             <input required
-                                className='border  border-gray-700 rounded-full px-5 py-2'
+                                className='border text-[12px] md:text-[14px] border-gray-700 rounded-full px-5 py-2'
                                 type="text"
                                 name="state"
                                 placeholder='State'
@@ -347,40 +345,41 @@ const FormCard = () => {
                     </div>
                 )}
 
+
                 {step === 5 && (
                     <div>
                         <div className='flex justify-between px-5 '>
                             <div className='text-[10px] flex flex-col items-center text-blue-600'>
                                 <span className='w-5 h-5 flex items-center justify-center rounded-full border border-blue-600'>1</span>
-                                <p className=' '>Next</p>
+                                <p className='font-bold'>Next</p>
                             </div>
 
                             <div className='text-[10px] flex flex-col items-center text-blue-600'>
                                 <span className='w-5 h-5 flex items-center justify-center rounded-full border border-blue-600'>2</span>
-                                <p className=' '>Next</p>
+                                <p className=' font-bold'>Next</p>
                             </div>
 
                             <div className='text-[10px] flex flex-col items-center text-blue-600'>
                                 <span className='w-5 h-5 flex items-center justify-center rounded-full border border-blue-600'>3</span>
-                                <p className=' '>Next</p>
+                                <p className='font-bold '>Next</p>
                             </div>
                             <div className='text-[10px] flex flex-col items-center text-blue-600'>
                                 <span className='w-5 h-5 flex items-center justify-center rounded-full border border-blue-600'>4</span>
-                                <p className=' '>Next</p>
+                                <p className=' font-bold'>Next</p>
                             </div>
 
                             <div className='text-[10px] flex flex-col relative items-center'>
                                 <span className='w-5 h-5 flex items-center justify-center rounded-full border border-green-500'>5</span>
-                                <p className=' '>Last Page</p>
+                                <p className='font-bold '>Last Page</p>
                             </div>
                         </div>
 
-                        <h5 className='font-bold text-[20px] mt-5 mb-3 flex flex-col gap-3'>
-                            <span>One last thing...</span>
-                            <span>Contact *</span>
+                        <h5 className='font-bold mt-5 mb-3 flex flex-col gap-3'>
+                            <span className='text-[16px] md:text-[20px]'>One last thing...</span>
+                            <span className='text-[13px] md:text-[20px]'>Contact *</span>
                         </h5>
                         <input required
-                            className='border w-full border-gray-700 rounded-full px-5 py-2'
+                            className='border text-[12px] md:text-[14px] w-full border-gray-700 rounded-full px-5 py-2'
                             type="text"
                             name="phone"
                             placeholder='Phone Number'
@@ -389,9 +388,9 @@ const FormCard = () => {
                         />{" "}
 
 
-                        <h5 className='font-bold text-[20px] mt-5 mb-3'>Preferred time of calling? *</h5>
+                        <h5 className='font-bold text-[13px] md:text-[20px] mt-5 mb-3'>Preferred time of calling? *</h5>
                         <div className='flex flex-col gap-1'>
-                            <label className='text-gray-500'>
+                            <label className='md:text-gray-500'>
                                 <input required
                                     type="radio"
                                     name="calling_time"
@@ -401,7 +400,7 @@ const FormCard = () => {
                                 />{" "}
                                 9 AM - 11 AM
                             </label>
-                            <label className='text-gray-500' >
+                            <label className='md:text-gray-500' >
                                 <input required
                                     type="radio"
                                     name="calling_time"
@@ -411,7 +410,7 @@ const FormCard = () => {
                                 />{" "}
                                 6 PM - 8 PM
                             </label>
-                            <label className='text-gray-500' >
+                            <label className='md:text-gray-500' >
                                 <input required
                                     type="radio"
                                     name="calling_time"
@@ -425,10 +424,10 @@ const FormCard = () => {
                     </div>
                 )}
 
-                <div className='w-full flex justify-center gap-5 mb-2 md:mb-14'>
-                    {step > 1 && step != 5 && <button onClick={prevStep} style={{ fontFamily: "'Space Grotesk', sans-serif" }} className=' hover:bg-[#033E8A] text-[#033E8A] border border-[#033E8A] transition-all duration-300 ease-in-out font-semibold text-sm hover:text-white px-12 py-3.5 rounded-full' >Back</button>}
-                    {step < 5 && <button onClick={nextStep} style={{ fontFamily: "'Space Grotesk', sans-serif" }} className=' bg-[#033E8A] hover:bg-white hover:text-[#033E8A] border hover:border-[#033E8A] transition-all duration-300 ease-in-out font-semibold text-sm text-white px-14 md:px-32 py-2 md:py-3.5 rounded-full' >Next</button>}
-                    {step === 5 && <Link to='/thank-you' style={{ fontFamily: "'Space Grotesk', sans-serif" }} className=' bg-[#033E8A] hover:bg-white hover:text-[#033E8A] border hover:border-[#033E8A] transition-all duration-300 ease-in-out font-semibold text-sm text-white px-32 py-3.5 rounded-full' >Submit</Link>}
+                <div className='w-full flex justify-center gap-3 md:gap-5 mb-2 md:mb-14'>
+                    {step > 1 && step != 5 && <button onClick={prevStep} style={{ fontFamily: "'Space Grotesk', sans-serif" }} className=' hover:bg-[#033E8A] text-[#033E8A] border border-[#033E8A] transition-all duration-300 ease-in-out font-semibold text-sm hover:text-white px-5 md:px-12 py-2 md:py-3.5 rounded-full' >Back</button>}
+                    {step < 5 && <button onClick={nextStep} style={{ fontFamily: "'Space Grotesk', sans-serif" }} className=' bg-[#033E8A] hover:bg-white hover:text-[#033E8A] border hover:border-[#033E8A] transition-all duration-300 ease-in-out font-semibold text-sm text-white px-12 md:px-32 py-2 md:py-3.5 rounded-full' >Next</button>}
+                    {step === 5 && <Link to='/thank-you' style={{ fontFamily: "'Space Grotesk', sans-serif" }} className=' bg-[#033E8A] hover:bg-white hover:text-[#033E8A] border hover:border-[#033E8A] transition-all duration-300 ease-in-out font-semibold text-sm text-white px-24 md:px-32 py-2 md:py-3.5 rounded-full' >Submit</Link>}
                 </div>
             </div>
         </section>

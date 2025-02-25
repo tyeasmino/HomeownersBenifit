@@ -4,16 +4,16 @@ import { Link } from 'react-router'
 
 const ThankYouCard = () => {
     return (
-        <section className='text-black p-4'>
-            <div className='flex flex-col gap-5 bg-white rounded-3xl mx-auto my-[20px] px-12 py-20'>
+        <section className='text-black md:p-4'>
+            <div className='flex flex-col gap-5 bg-white rounded-3xl mx-auto my-[20px] px-12 py-5 md:py-20'>
                 <div className='w-fit flex flex-col gap-5 justify-center mx-auto'>
-                    <h1 style={{ fontFamily: "'Space Grotesk', sans-serif" }} className='text-[22px] font-semibold text-center '>Thank you for your response</h1>
+                    <h1 style={{ fontFamily: "'Space Grotesk', sans-serif" }} className='text-[18px] md:text-[22px] font-semibold text-center '>Thank you for your response</h1>
                     <h1 className='text-center h-[1px] w-full bg-black'></h1>
                 </div>
 
                 <div className='flex flex-col gap-5'>
-                    <h5 className='font-semibold text-[16px] '>You're about to save estimated <br />18,000 USD.</h5>
-                    <h6 className='font-semibold text-[14px]'>We'll contact with you soon with <br /> proper credentials.</h6>
+                    <h5 className='font-semibold text-[14px] md:text-[16px] '>You're about to save estimated <br />18,000 USD.</h5>
+                    <h6 className='font-semibold text-[12px] md:text-[14px]'>We'll contact with you soon with <br /> proper credentials.</h6>
                 </div>
 
                 <div className='text-center my-7'>
