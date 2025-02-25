@@ -4,12 +4,12 @@ import FormCard from '../components/FormCard'
 
 const Home = () => {
     return (
-        <div className='max-w-screen-xl px-4 mx-auto flex gap-48 items-center justify-between'>
-            <div className='w-1/2'>
+        <div className='max-w-screen-xl px-4 mx-auto flex flex-col md:flex-row md:gap-48 items-center justify-between'>
+            <div className='w-full md:w-1/2'>
                 <Introduction />
             </div>
 
-            <div className='w-1/2'>
+            <div className='w-full md:w-1/2'>
                 <FormCard />
             </div>
         </div>
