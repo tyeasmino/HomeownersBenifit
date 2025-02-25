@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router'
+import { useNavigate } from 'react-router'
 
 const FormCard = () => {
+    const navigate = useNavigate();
     const [step, setStep] = useState(1)
 
     const [formData, setFormData] = useState({
@@ -16,6 +17,7 @@ const FormCard = () => {
         phone: "",
         calling_time: "",
     })
+    const lastStep = formData.phone.trim() !== '' && formData.calling_time.trim() !== ''
 
     const validateStep = () => {
         if (step === 1 && !formData.homeOwner) {
@@ -32,8 +34,10 @@ const FormCard = () => {
                 return false;
             }
         }
-        if (step === 5 && !formData.phone && !formData.calling_time) {
-            return false;
+        if (step === 5) {
+            if (!formData.phone || !formData.calling_time) {
+                return false;
+            }
         }
 
         return true;
@@ -49,6 +53,9 @@ const FormCard = () => {
         setStep((prevStep) => prevStep - 1);
     };
 
+    //     this is part 2
+    // here I not want to get access to click on submit button if user not gives input of phone number and not selects any calling time, both field should be required. I have added required but i dont know why it is not working here, without giving phone number and without selecting call time user can click on submit button here now and it is wrong, so how can I prevent it??
+    // when both input is present only then submit button should work
     const handleChange = (e) => {
         setFormData({
             ...formData,
@@ -57,11 +64,20 @@ const FormCard = () => {
     };
 
 
+
+    const handleSubmit = () => {
+        if (lastStep) {
+            navigate('/thank-you');
+        }
+    };
+
+
     return (
         <section className='text-black md:p-4'>
             <div className='flex flex-col gap-5 bg-white rounded-3xl mx-auto my-[20px] p-7'>
                 <div className='w-fit mx-auto'>
                     <h1 style={{ fontFamily: "'Space Grotesk', sans-serif" }} className='text-[13px] md:text-[20px] font-semibold'>Complete the steps to unlock your solar potential</h1>
+
                 </div>
 
                 {step === 1 && (
@@ -427,7 +443,15 @@ const FormCard = () => {
                 <div className='w-full flex justify-center gap-3 md:gap-5 mb-2 md:mb-14'>
                     {step > 1 && step != 5 && <button onClick={prevStep} style={{ fontFamily: "'Space Grotesk', sans-serif" }} className=' hover:bg-[#033E8A] text-[#033E8A] border border-[#033E8A] transition-all duration-300 ease-in-out font-semibold text-sm hover:text-white px-5 md:px-12 py-2 md:py-3.5 rounded-full' >Back</button>}
                     {step < 5 && <button onClick={nextStep} style={{ fontFamily: "'Space Grotesk', sans-serif" }} className=' bg-[#033E8A] hover:bg-white hover:text-[#033E8A] border hover:border-[#033E8A] transition-all duration-300 ease-in-out font-semibold text-sm text-white px-12 md:px-32 py-2 md:py-3.5 rounded-full' >Next</button>}
-                    {step === 5 && <Link to='/thank-you' style={{ fontFamily: "'Space Grotesk', sans-serif" }} className=' bg-[#033E8A] hover:bg-white hover:text-[#033E8A] border hover:border-[#033E8A] transition-all duration-300 ease-in-out font-semibold text-sm text-white px-24 md:px-32 py-2 md:py-3.5 rounded-full' >Submit</Link>}
+                    {step === 5 &&
+                        <button
+                            onClick={handleSubmit}
+                            disabled={!lastStep}
+                            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                            className=' bg-[#033E8A] hover:bg-white hover:text-[#033E8A] border hover:border-[#033E8A] transition-all duration-300 ease-in-out font-semibold text-sm text-white px-24 md:px-32 py-2 md:py-3.5 rounded-full'>
+                            Submit
+                        </button>
+                    }
                 </div>
             </div>
         </section>
